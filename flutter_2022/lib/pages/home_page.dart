@@ -36,10 +36,20 @@ class _HomePageState extends State<HomePage> {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
             ),
-            Container(
-              color: Colors.red,
-              width: 250.0,
-              height: 250.0,
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const FlutterLogo(
+                    size: 150,
+                    textColor: Colors.white,
+                    style: FlutterLogoStyle.horizontal,
+                  ),
+                  ElevatedButton(onPressed: () {}, child: const Text('Entrar'))
+                ],
+              ),
             ),
           ],
         ),
