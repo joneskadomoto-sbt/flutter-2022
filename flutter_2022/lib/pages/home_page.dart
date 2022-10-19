@@ -19,20 +19,25 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('SBT Lab'),
       ),
-      body: Stack(
-        alignment: Alignment.center,
-        children: [
-          Container(
-            color: Colors.red,
-            width: 100.0,
-            height: 100.0,
-          ),
-          Container(
-            color: Colors.blue,
-            width: 80.0,
-            height: 80.0,
-          ),
-        ],
+      body: Center(
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: Image.network(
+                'https://st2.depositphotos.com/1400069/5999/i/600/depositphotos_59995765-stock-photo-abstract-galaxy-background.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
+            Container(
+              color: Colors.red,
+              width: 250.0,
+              height: 250.0,
+            ),
+          ],
+        ),
       ),
     );
   }
